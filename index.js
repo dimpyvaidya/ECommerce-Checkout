@@ -1,9 +1,11 @@
 //fetch the buttons
-let minusButton = document.getElementById("pantsMinusButton");
-let plusButton = document.getElementById("pantsAddButton");
+let minusButtonPants = document.getElementById("pantsMinusButton");
+let plusButtonPants = document.getElementById("pantsAddButton");
+let minusButtonShirt = document.getElementById("shirtMinusButton");
+let plusButtonShirt = document.getElementById("shirtAddButton");
 
 //create function
-function decreaseValue() {
+function decreaseValuePants() {
     //get quantity from innerHTML\
     //decrease by 1
     let qtyMinus = parseInt(document.getElementById("pantsQty").innerHTML) - 1;
@@ -11,12 +13,12 @@ function decreaseValue() {
     document.getElementById("pantsQty").innerHTML = qtyMinus;
 
     //finding extended price
-    let extdPrc = parseFloat(document.getElementById("extdPrice").innerHTML);
-    document.getElementById("extdPrice").innerHTML = qtyMinus * 40.99;
+    let extdPrc = parseFloat(document.getElementById("extdPricePants").innerHTML);
+    document.getElementById("extdPricePants").innerHTML = qtyMinus * 40.99;
 
 }
 
-function increaseValue() {
+function increaseValuePants() {
     //get quantity from innerHTML\
     //increase by 1
     let qtyAdd = parseInt(document.getElementById("pantsQty").innerHTML) + 1;
@@ -24,39 +26,41 @@ function increaseValue() {
     document.getElementById("pantsQty").innerHTML = qtyAdd;
 
     //finding extended price
-    let extdPrc = parseFloat(document.getElementById("extdPrice").innerHTML);
-    document.getElementById("extdPrice").innerHTML = qtyAdd * 40.99;
+    let extdPrc = parseFloat(document.getElementById("extdPricePants").innerHTML);
+    document.getElementById("extdPricePants").innerHTML = qtyAdd * 40.99;
 
 }
 
 //shirt
 //create function
-function decreaseValue() {
+function decreaseValueShirt() {
     //get quantity from innerHTML\
     //decrease by 1
-    let qtyMinus = parseInt(document.getElementById("pantsQty").innerHTML) - 1;
+    let qtyMinus = parseInt(document.getElementById("shirtQty").innerHTML) - 1;
     //assign that new value to the innerHTML
-    document.getElementById("pantsQty").innerHTML = qtyMinus;
+    document.getElementById("shirtQty").innerHTML = qtyMinus;
 
     //finding extended price
-    let extdPrc = parseFloat(document.getElementById("extdPrice").innerHTML);
-    document.getElementById("extdPrice").innerHTML = qtyMinus * 40.99;
+    let extdPrc = parseFloat(document.getElementById("extdPriceShirt").innerHTML);
+    document.getElementById("extdPriceShirt").innerHTML = qtyMinus * 40.99;
 
 }
 
-function increaseValue() {
+function increaseValueShirt() {
     //get quantity from innerHTML\
     //increase by 1
-    let qtyAdd = parseInt(document.getElementById("pantsQty").innerHTML) + 1;
+    let qtyAdd = parseInt(document.getElementById("shirtQty").innerHTML) + 1;
     //assign that new value to the innerHTML
-    document.getElementById("pantsQty").innerHTML = qtyAdd;
+    document.getElementById("shirtQty").innerHTML = qtyAdd;
 
     //finding extended price
-    let extdPrc = parseFloat(document.getElementById("extdPrice").innerHTML);
-    document.getElementById("extdPrice").innerHTML = qtyAdd * 40.99;
+    let extdPrc = parseFloat(document.getElementById("extdPriceShirt").innerHTML);
+    document.getElementById("extdPriceShirt").innerHTML = qtyAdd * 40.99;
 
 }
 
 //add event listener
-minusButton.addEventListener("click", decreaseValue);
-plusButton.addEventListener("click", increaseValue);
+minusButtonPants.addEventListener("click", decreaseValuePants);
+plusButtonPants.addEventListener("click", increaseValuePants);
+minusButtonShirt.addEventListener("click", decreaseValueShirt);
+plusButtonShirt.addEventListener("click", increaseValueShirt);
