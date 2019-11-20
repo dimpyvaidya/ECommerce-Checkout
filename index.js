@@ -42,7 +42,7 @@ function decreaseValueShirt() {
 
     //finding extended price
     let extdPrc = parseFloat(document.getElementById("extdPriceShirt").innerHTML);
-    document.getElementById("extdPriceShirt").innerHTML = qtyMinus * 40.99;
+    document.getElementById("extdPriceShirt").innerHTML = qtyMinus * 10.99;
 
 }
 
@@ -55,7 +55,7 @@ function increaseValueShirt() {
 
     //finding extended price
     let extdPrc = parseFloat(document.getElementById("extdPriceShirt").innerHTML);
-    document.getElementById("extdPriceShirt").innerHTML = qtyAdd * 40.99;
+    document.getElementById("extdPriceShirt").innerHTML = qtyAdd * 10.99;
 
 }
 
