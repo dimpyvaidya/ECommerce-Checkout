@@ -1,4 +1,13 @@
-.output {
+.head {
     display: inline-block;
     padding-right: 1em;
+}
+
+div {
+    padding-bottom: 0.5em;
+}
+
+.content {
+    padding-right: 2em;
+    display: inline-block;
 }
