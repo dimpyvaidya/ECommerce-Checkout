@@ -30,7 +30,7 @@
     </div>
 
     <div>
-        <label class="content">Shirt</label>
+        <label class="content"> Shirt</label>
         <div class="content">
             <input type="button" id="shirtMinusButton" value="-">
             <label id="shirtQty"> 0 </label>
@@ -41,9 +41,16 @@
     </div>
     <div>
         <input type="button" id="calculate" value="Calculate"><br><br>
-        <label>Subtotal :</label><br><br>
-        <label>Tax :</label><br><br>
+        <label>Sub Total :</label>
+        <label id="subTotal"></label><br><br>
+        <label>Tax :</label>
+        <label id="taxValue"></label><br><br>
         <label>Total :</label>
+        <label id="totalValue"></label><br><br><br>
+    </div>
+    <div>
+        <label>Have a promo code?</label>
+        <input type="button" id="promo" value="Click to Enter">
     </div>
 
     <script src="index.js"></script>
