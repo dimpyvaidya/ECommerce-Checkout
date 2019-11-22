@@ -89,7 +89,7 @@ function promo() {
         varTotalValue.innerHTML = (parseFloat(varSubTotal.innerHTML) + parseFloat(varTax.innerHTML)).toFixed(2);
 
     } else if (pCode == "FIFTYFIFTY") {
-        varTax.innerHTML = (parseFloat(varTax.innerHTML) * 50 / 100).toFixed(2);
+        varSubTotal.innerHTML = (parseFloat(varSubTotal.innerHTML) * 50 / 100).toFixed(2);
         varTotalValue.innerHTML = (parseFloat(varSubTotal.innerHTML) + parseFloat(varTax.innerHTML)).toFixed(2);
     }
 }
