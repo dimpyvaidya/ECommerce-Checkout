@@ -15,20 +15,24 @@ let varTax = document.getElementById("taxValue");
 let varTotalValue = document.getElementById("totalValue");
 
 //create function
+
+
 function decreaseValuePants() {
     //get quantity from innerHTML
     //decrease by 1
-    let qtyMinus = parseInt(varPantQty.innerHTML) - 1;
-    //assign that new value to the innerHTML
-    varPantQty.innerHTML = qtyMinus;
+    if (varPantQty.innerHTML > 0) {
+        let qtyMinus = parseInt(varPantQty.innerHTML) - 1;
+        //assign that new value to the innerHTML
+        varPantQty.innerHTML = qtyMinus;
 
+    } else {
+        varPantQty.innerHTML = 0;
+    }
     //finding extended price
     let extdPrc = parseFloat(varExtdPricePants.innerHTML);
     varExtdPricePants.innerHTML = qtyMinus * 40.99;
-    if (varPantQty.innerHTML == 0) {
-        pantsMinusButton.disabled = true;
-    }
 }
+
 
 function increaseValuePants() {
     //get quantity from innerHTML\
@@ -46,12 +50,16 @@ function increaseValuePants() {
 //shirt
 //create function
 function decreaseValueShirt() {
+    if (varShirtQty.innerHTML > 0) {
 
-    //get quantity from innerHTML\
-    //decrease by 1
-    let qtyMinus = parseInt(varShirtQty.innerHTML) - 1;
-    //assign that new value to the innerHTML
-    varShirtQty.innerHTML = qtyMinus;
+        //get quantity from innerHTML\
+        //decrease by 1
+        let qtyMinus = parseInt(varShirtQty.innerHTML) - 1;
+        //assign that new value to the innerHTML
+        varShirtQty.innerHTML = qtyMinus;
+    } else {
+        varShirtQty.innerHTML = 0;
+    }
 
     //finding extended price
     let extdPrc = parseFloat(varExtdPriceShirt.innerHTML);
