@@ -30,7 +30,7 @@ function decreaseValuePants() {
     }
     //finding extended price
     let extdPrc = parseFloat(varExtdPricePants.innerHTML);
-    varExtdPricePants.innerHTML = qtyMinus * 40.99;
+    varExtdPricePants.innerHTML = varPantQty.innerHTML * 40.99;
 }
 
 
@@ -63,10 +63,8 @@ function decreaseValueShirt() {
 
     //finding extended price
     let extdPrc = parseFloat(varExtdPriceShirt.innerHTML);
-    varExtdPriceShirt.innerHTML = qtyMinus * 10.99;
-    if (varShirtQty.innerHTML == 0) {
-        shirtMinusButton.disabled = true;
-    }
+    varExtdPriceShirt.innerHTML = varShirtQty.innerHTML * 10.99;
+
 }
 
 
